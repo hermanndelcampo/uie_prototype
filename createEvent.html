@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>2</title>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <link rel="stylesheet/less" type="text/css" href="style.less">
+        <script src="js/less.min.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="header-inner">
+                    <div class="header-title">Event anlegen</div>
+                    <div class="header-cog"><img src="imgs/cog.png"></div>
+                </div>
+            </header>
+
+            <form class="event-create-form-outer">
+                <input class="event-create-textinput" type="text" name="eventname">
+                <div class="event-create-radio-toolbar">
+                    <input id="radio-1" type="radio" name="visibility" value="private" checked>
+                    <label for="radio-1">Privat</label>
+                    <input is="radio-2" type="radio" name="visibility" value="public">
+                    <label for="radio-2">&Oumlffentlich</label>
+                </div>
+
+                <p>
+                    <input type="checkbox" name="friend" value="friend1"> Hans Hansen<br>
+                    <input type="checkbox" name="friend" value="friend2"> Erika Meier<br>
+                    <input type="checkbox" name="friend" value="friend3"> Jasmin Yildrim<br>
+                    <input type="checkbox" name="friend" value="friend4"> Udo Ender
+                </p>
+
+                <input class="event-create-submit" type="submit">
+                
+            </form>
+
+            <nav>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+            </nav>
+        </div>
+    </body>
+</html>
