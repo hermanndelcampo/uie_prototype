@@ -145,9 +145,17 @@ form.event-create-form-outer {
 }
 
 nav {
+  background: rgba(255,255,255,0.8);
   position: fixed;
   bottom:0;
   left:0;
+  .nav-btn {
+    display: inline-block;
+    padding: 0px 10px;
+    &:not(:last-child) {
+      border-right: 1px solid #ccc;
+    }
+  }
 }
 
 .clearfix {
