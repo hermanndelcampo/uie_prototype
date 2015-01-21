@@ -5,6 +5,7 @@ body {
 .container {
   width:360px;
   height:640px;
+  overflow:hidden;
 }
 
 header {
@@ -19,3 +20,28 @@ header {
     }
   }
 }
+
+form.event-create-form-outer {
+  .event-create-textinput{
+    width:80%;
+    margin-left:10%;
+  }
+  .event-create-submit{
+    width:80%;
+    margin-left:10%;
+  }
+  .event-create-radio-toolbar{
+    width:80%;
+    margin-left:10%;
+    input {
+      width:50%;
+    }
+    label {
+      width:50%;
+    }
+    input[type="radio"]:checked + label {
+      background:blue;
+    }
+  }
+}
+
