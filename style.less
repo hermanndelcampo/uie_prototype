@@ -14,7 +14,7 @@ body {
 .container {
   width:360px;
   height:640px;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 header {
@@ -235,3 +235,28 @@ nav {
   clear: both;
 }
 
+.add-filter-outer {
+  padding: 10px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.filters-outer {
+  display: none;
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    background: @color2;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  a.active {
+    background: @color1;
+    &:after {
+      content: " ✓";
+    }
+  }
+}
