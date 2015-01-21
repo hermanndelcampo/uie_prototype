@@ -4,6 +4,7 @@
 body {
   padding: 0;
   margin: 0;
+  .font;
 }
 
 .font {
@@ -35,8 +36,7 @@ header {
 }
 
 .start-elem-outer {
-  border-bottom: 1px solid #ccc;
-  padding: 20px 10px;
+  border-top: 1px solid #ccc;
   .start-elem-icon {
     float:left;
   }
@@ -52,12 +52,27 @@ header {
     padding: 10px;
   }
 
+  .inner {
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+    &.active {
+      border-bottom: 5px solid @color1;
+      box-shadow: 0 4px 6px #ccc;
+    }
+  }
+
   .start-elem-hidden {
+    display: none;
+    padding-top: 10px;
 
     .start-elem-album {
+      padding: 10px;
+      position: relative;
+      border-bottom: 1px solid #ccc ;
       .album-info {
         display: inline-block;
         width: 150px;
+        vertical-align: top;
         .title {
           font-weight: bold;
           .font;
@@ -87,12 +102,12 @@ header {
         display: inline-block;
         position: relative;
         height: 100px;
-        overflow-y: hidden;
         width: 185px;
+        overflow: scroll;
+        overflow-y: hidden;
+
         .image-scroll {
-          position: absolute;
-          left:0;
-          top:0;
+          width: 450px;
           img {
             display: inline-block;
           }
