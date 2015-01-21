@@ -1,10 +1,22 @@
 <html>
 <head>
-    <title>Edit Event</title>
+    <title>Snapshots</title>
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet/less" type="text/css" href="style.less">
     <script src="js/less.min.js" type="text/javascript"></script>
     <script>
+
+    var picsToggled = [false, false, false, false, false, false];
+    function togglePics(index){
+        if(picsToggled[index] == true){
+            $('.images-outer img').eq(index).attr('src', 'imgs/platzhalter.png');
+            picsToggled[index] = false;
+        } else {
+            $('.images-outer img').eq(index).attr('src', 'imgs/platzhalter2.png');
+            picsToggled[index] = true;
+        }
+    }
+
         $(document).ready(function() {
             $('.show-filter').click(function() {
                 var elem = $(this).parents('.add-filter-outer').find('.filters-outer');
@@ -60,39 +72,28 @@
 <div class="container">
     <header>
         <div class="header-inner">
-            <div class="header-title">Edit Event</div>
-            <div class="header-cog"><img src="imgs/cog.png" width="32" height="32"></div>
+            <div class="header-title">Bilderauswahl</div>
+            <div class="header-cog"><img src="imgs/share.png" width="32" height="32"></div>
             <div class="clearfix"></div>
         </div>
     </header>
 
     <div class="edit-event-outer">
-        <div class="add-filter-outer">
-            <a class="show-filter" href="#">Filter hinzuf&uuml;gen</a>
-            <div class="filters-outer">
-                <a data-filter="1" href="#">Penis</a>
-                <a data-filter="2" href="#">Verwackelte</a>
-            </div>
-        </div>
         <div class="images-outer">
-            <img class="1" src="imgs/platzhalter.png" width="49%">
-            <img class="1 2" src="imgs/platzhalter_v.png" width="49%">
-            <img class="1" src="imgs/platzhalter.png" width="49%">
-            <img class="1 2" src="imgs/platzhalter_v.png" width="49%">
-            <img class="1 2" src="imgs/platzhalter_v.png" width="49%">
-            <img class="1 2" src="imgs/platzhalter_v.png" width="49%">
-            <img class="1" src="imgs/platzhalter.png" width="49%">
-            <img class="1" src="imgs/platzhalter.png" width="49%">
-            <img class="1" src="imgs/platzhalter.png" width="49%">
-            <img class="1" src="imgs/platzhalter.png" width="49%">
+            <img class="1 untoggled" src="imgs/platzhalter.png" width="49%" onClick="togglePics(0);">
+            <img class="1 untoggled" src="imgs/platzhalter.png" width="49%" onClick="togglePics(1);">
+            <img class="1 untoggled" src="imgs/platzhalter.png" width="49%" onClick="togglePics(2);">
+            <img class="1 untoggled" src="imgs/platzhalter.png" width="49%" onClick="togglePics(3);">
+            <img class="1 untoggled" src="imgs/platzhalter.png" width="49%" onClick="togglePics(4);">
+            <img class="1 untoggled" src="imgs/platzhalter.png" width="49%" onClick="togglePics(5);">
         </div>
     </div>
 
     <nav>
-        <div class="nav-btn"><a href="index.html"><img src="imgs/nav-5.png" width="64" height="64"></a></div>
+        <div class="nav-btn"><a href="camera.html"><img src="imgs/nav-1.png" width="64" height="64"></a></div>
         <div class="nav-btn"><img src="imgs/nav-dummy.png" width="64" height="64"></div>
         <div class="nav-btn"><img src="imgs/nav-dummy.png" width="64" height="64"></div>
-        <div class="nav-btn"><a href="viewAlbum.html"><img src="imgs/nav-check.png" width="64" height="64"></a></div>
+        <div class="nav-btn"><a href="listEvent.html"><img src="imgs/nav-check.png" width="64" height="64"></a></div>
     </nav>
 </div>
 </body>
