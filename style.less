@@ -1,5 +1,13 @@
-body {
+@color1: #00e98b;
+@color2: #00aa86;
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.font {
+  font-family: Kalinga, sans-serif;
 }
 
 .container {
@@ -9,14 +17,20 @@ body {
 }
 
 header {
-
+  -webkit-box-shadow: 0 4px 5px #ccc;
+  -moz-box-shadow: 0 4px 5px #ccc;
+  box-shadow: 0 4px 5px #ccc;
   .header-inner {
     .header-title {
       float:left;
       text-transform: uppercase;
+      font-family: Kalinga;
+      margin-top: 5px;
+      padding: 5px 5px;
     }
     .header-cog {
       float:right;
+      padding: 5px 5px;
     }
   }
 }
@@ -43,5 +57,85 @@ form.event-create-form-outer {
       background:blue;
     }
   }
+}
+
+.start-elem-outer {
+  border-bottom: 1px solid #ccc;
+  padding: 20px 10px;
+  .start-elem-icon {
+    float:left;
+  }
+  .start-elem-text {
+    font-family: Kalinga, sans-serif;
+    font-size: 11px;
+    width: 200px;
+    padding: 10px;
+    float:left;
+  }
+  .start-elem-btn {
+    float:left;
+    padding: 10px;
+  }
+
+  .start-elem-hidden {
+
+    .start-elem-album {
+      .album-info {
+        display: inline-block;
+        width: 150px;
+        .title {
+          font-weight: bold;
+          .font;
+        }
+        .people {
+          .font();
+          font-size: 11px;
+          color: #ccc;
+        }
+        .updates {
+          background: #c4762d;
+          background: -moz-linear-gradient(-45deg,  #c4762d 0%, #d13a04 29%, #ff1616 74%);
+          background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#c4762d), color-stop(29%,#d13a04), color-stop(74%,#ff1616));
+          background: -webkit-linear-gradient(-45deg,  #c4762d 0%,#d13a04 29%,#ff1616 74%);
+          background: -o-linear-gradient(-45deg,  #c4762d 0%,#d13a04 29%,#ff1616 74%);
+          background: -ms-linear-gradient(-45deg,  #c4762d 0%,#d13a04 29%,#ff1616 74%);
+          background: linear-gradient(135deg,  #c4762d 0%,#d13a04 29%,#ff1616 74%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4762d', endColorstr='#ff1616',GradientType=1 );
+          border-radius: 5px;
+          color: white;
+          padding: 0px 25px;
+          display: inline-block;
+          .font;
+        }
+    }
+      .album-images {
+        display: inline-block;
+        position: relative;
+        height: 100px;
+        overflow-y: hidden;
+        width: 185px;
+        .image-scroll {
+          position: absolute;
+          left:0;
+          top:0;
+          img {
+            display: inline-block;
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+nav {
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+
+.clearfix {
+  clear: both;
 }
 
