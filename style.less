@@ -12,16 +12,25 @@ body {
 }
 
 .container {
+  margin-top: 42px;
   width:360px;
   height:640px;
+  position: relative;
   overflow-x:hidden;
 }
 
 header {
-  -webkit-box-shadow: 0 4px 5px #ccc;
-  -moz-box-shadow: 0 4px 5px #ccc;
-  box-shadow: 0 4px 5px #ccc;
+  position: relative;
+
   .header-inner {
+    position: fixed;
+    background: white;
+    -webkit-box-shadow: 0 4px 5px #ccc;
+    -moz-box-shadow: 0 4px 5px #ccc;
+    box-shadow: 0 4px 5px #ccc;
+    top:0;
+    width: 360px;
+    z-index: 999;
     .header-title {
       float:left;
       text-transform: uppercase;
